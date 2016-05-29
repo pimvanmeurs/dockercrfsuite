@@ -16,7 +16,7 @@ RUN \
   apt-get update && \
   apt-get install -y -q \
     python \
-    python-pip \
+    python-pip 
 
 RUN \
   curl -L -O -s https://github.com/downloads/chokkan/liblbfgs/liblbfgs-1.10.tar.gz && \
@@ -26,11 +26,13 @@ RUN \
   make && \
   make install
 
-
 RUN \
   curl -L -O -s https://github.com/downloads/chokkan/crfsuite/crfsuite-0.12.tar.gz && \
   tar -xvf crfsuite-0.12.tar.gz && \
   cd crfsuite-0.12 && \
+  ./configure --prefix=$HOME/local --with-liblbfgs=$HOME/local && \
+  make && \
+  make install
 
 RUN \
   pip install spacy && \
