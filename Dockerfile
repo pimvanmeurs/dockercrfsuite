@@ -16,18 +16,7 @@ RUN \
   apt-get update && \
   apt-get install -y -q \
     python \
-    cython \
     python-pip \
-    python-numpy \
-    python-scipy \
-    python-matplotlib
-
-RUN \
-  apt-get update && \
-  apt-get install -y -q \
-    autoconf \
-    automake \
-    libtool
 
 RUN \
   curl -L -O -s https://github.com/downloads/chokkan/liblbfgs/liblbfgs-1.10.tar.gz && \
