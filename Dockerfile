@@ -2,6 +2,11 @@ FROM ubuntu:14.04
 
 MAINTAINER Pim van Meurs
 
+RUN \
+  apt-get update && \
+  apt-get install -y -q \
+    python \
+    python-pip
 
 RUN \
   apt-get update && \
@@ -11,12 +16,6 @@ RUN \
     cifs-utils \
     curl \
     subversion
-
-RUN \
-  apt-get update && \
-  apt-get install -y -q \
-    python \
-    python-pip 
 
 RUN \
   curl -L -O -s https://github.com/downloads/chokkan/liblbfgs/liblbfgs-1.10.tar.gz && \
