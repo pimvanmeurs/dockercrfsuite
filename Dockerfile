@@ -42,7 +42,7 @@ RUN \
   curl -L -O -s https://github.com/downloads/chokkan/crfsuite/crfsuite-0.12.tar.gz && \
   tar -xvf crfsuite-0.12.tar.gz && \
   cd crfsuite-0.12 && \
-  ./configure --prefix=$HOME/local --with-liblbfgs=$HOME/local &&
+  ./configure --prefix=$HOME/local --with-liblbfgs=$HOME/local && \
   make && \
   make install 
 
