@@ -6,6 +6,7 @@ RUN \
   apt-get update && \
   apt-get install -y -q \
     python \
+    cython \
     python-pip
 
 RUN \
